@@ -25,6 +25,17 @@ export class AppComponent implements OnInit {
       )
   }
 
+  checkAnswer(userAnswer){
+    if(this.userAnswer === this.questionInfo.answer) {
+      this.userScore += this.questionInfo.value;
+    }
+    else {
+      this.userScore -= this.questionInfo.value;
+    }
+
+    this.getQuestionInfo();
+  }
+
   ngOnInit(){
     this.getQuestionInfo()
   }

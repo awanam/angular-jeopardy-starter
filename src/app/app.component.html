@@ -13,7 +13,3 @@
 Answer <input [(ngModel)]="userAnswer" type="text">
 <button (click)=checkAnswer(userAnswer)>click me</button>
 {{questionInfo?.answer}}
-
-<div>
-  <answer-component #child [potato]="name" (somethingHappened)="changeName()"></answer-component>
-</div>
