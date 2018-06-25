@@ -5,4 +5,15 @@
   </h1>
 </div>
 
+<b>The Category:</b> {{questionInfo?.category.title}} <br>
+<b>Point Value:</b> {{questionInfo?.value}} <br>
 <b>The Question:</b> {{questionInfo?.question}} <br>
+<b>User Score:</b> {{userScore}} <br>
+
+Answer <input [(ngModel)]="userAnswer" type="text">
+<button (click)=checkAnswer(userAnswer)>click me</button>
+{{questionInfo?.answer}}
+
+<div>
+  <answer-component #child [potato]="name" (somethingHappened)="changeName()"></answer-component>
+</div>

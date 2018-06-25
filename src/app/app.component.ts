@@ -9,6 +9,8 @@ import { DataService } from './data.service'
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  userScore = 0;
+  userAnswer = "";
 
   questionInfo;
 
