@@ -11,5 +11,12 @@
 <b>User Score:</b> {{userScore}} <br>
 
 Answer <input [(ngModel)]="userAnswer" type="text">
-<button (click)=checkAnswer(userAnswer)>click me</button>
 {{questionInfo?.answer}}
+
+<div>
+  <app-answer-component #child  [userAnswer]="userAnswer"
+                                [userScore]="userScore"
+                                [questionInfo]="questionInfo"
+                                (getNewQuestion)="($event)"
+  ></app-answer-component>
+</div>

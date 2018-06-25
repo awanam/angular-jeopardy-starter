@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AnswerComponentComponent implements OnInit {
 
   @Input() userAnswer;
-  @Input() userScore;
+  @Input('userScore') userScore;
   @Input() questionInfo;
 
   @Output() getNewQuestion = new EventEmitter();
@@ -20,6 +20,8 @@ export class AnswerComponentComponent implements OnInit {
     else {
       this.userScore -= this.questionInfo.value;
     }
+    this.userAnswer="";
+    this.getNewQuestion.emit(this.userScore);
   }
 
   constructor() { }
