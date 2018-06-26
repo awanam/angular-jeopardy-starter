@@ -25,8 +25,9 @@ export class AppComponent implements OnInit {
       )
   }
 
-  getNewQuestion(param) {
-    this.userScore = param;
+  updateScore(param) {
+    this.userScore += param;
+    this.getQuestionInfo();
   }
 
   ngOnInit(){

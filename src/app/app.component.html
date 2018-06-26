@@ -17,6 +17,6 @@ Answer <input [(ngModel)]="userAnswer" type="text">
   <app-answer-component #child  [userAnswer]="userAnswer"
                                 [userScore]="userScore"
                                 [questionInfo]="questionInfo"
-                                (getNewQuestion)="($event)"
+                                (getNewQuestion)="updateScore($event)"
   ></app-answer-component>
 </div>

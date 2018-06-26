@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AnswerComponentComponent implements OnInit {
 
   @Input() userAnswer;
-  @Input('userScore') userScore;
+  @Input() userScore;
   @Input() questionInfo;
 
   @Output() getNewQuestion = new EventEmitter();
